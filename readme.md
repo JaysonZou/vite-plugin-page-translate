@@ -5,7 +5,7 @@
 
 🌍 **Vite plugin for immersive in-page translation** — seamlessly translate selected zones of your web app and optionally show original text.
 
-![npm](https://img.shields.io/npm/v/vite-plugin-immersive-translate) ![license](https://img.shields.io/npm/l/vite-plugin-immersive-translate)
+![npm](https://img.shields.io/npm/v/vite-plugin-page-translate) ![license](https://img.shields.io/npm/l/vite-plugin-page-translate)
 
 ---
 
@@ -22,9 +22,9 @@
 ## 📦 Installation
 
 ```bash
-npm install vite-plugin-immersive-translate
+npm install vite-plugin-page-translate
 # or
-yarn add vite-plugin-immersive-translate
+yarn add vite-plugin-page-translate
 ```
 
 ---
@@ -34,11 +34,11 @@ yarn add vite-plugin-immersive-translate
 ### 1. Add the plugin in `vite.config.ts`
 
 ```ts
-import immersiveTranslate from 'vite-plugin-immersive-translate';
+import pageTranslate from 'vite-plugin-page-translate';
 
 export default {
   plugins: [
-    immersiveTranslate({
+    pageTranslate({
       selector: '.translate-zone',  // CSS selector to target
       lang: 'zh-CN',                // Target language (default: zh-CN)
       autoStart: true               // Automatically start translation on page load
@@ -66,9 +66,9 @@ In your HTML or Vue templates:
 The plugin exposes a global API:
 
 ```js
-window.__immersiveTranslate.start();
-window.__immersiveTranslate.reset();
-window.__immersiveTranslate.showOriginal();
+window.__pageTranslate.start();
+window.__pageTranslate.reset();
+window.__pageTranslate.showOriginal();
 ```
 
 ---
@@ -86,7 +86,7 @@ window.__immersiveTranslate.showOriginal();
 ## 📜 Example
 
 ```ts
-immersiveTranslate({
+pageTranslate({
   selector: '.article-content',
   lang: 'fr',
   autoStart: false

@@ -1,6 +1,4 @@
 import { Plugin } from "vite";
-import fs from "fs";
-import path from "path";
 
 interface ImmersiveOptions {
   selector?: string;
@@ -8,15 +6,13 @@ interface ImmersiveOptions {
   autoStart?: boolean;
 }
 
-export default function immersiveTranslate(
-  options: ImmersiveOptions = {}
-): Plugin {
+export default function pageTranslate(options: ImmersiveOptions = {}): Plugin {
   const selector = options.selector || ".translate-zone";
   const lang = options.lang || "zh-CN";
   const autoStart = options.autoStart ?? true;
 
   return {
-    name: "vite-plugin-immersive-translate",
+    name: "vite-plugin-page-translate",
 
     enforce: "post",
 
@@ -24,7 +20,7 @@ export default function immersiveTranslate(
       const injectScript = `
         <script type="module">
           import "./runtime.js";
-          window.__immersiveTranslate?.init({
+          window.__pageTranslate?.init({
             selector: "${selector}",
             lang: "${lang}",
             autoStart: ${autoStart}
