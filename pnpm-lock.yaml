@@ -1,11 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^22.15.12
   vite: ^6.3.4
   vite-plugin-inspect: ^11.0.1
 
 devDependencies:
-  vite: registry.npmjs.org/vite/6.3.4
+  '@types/node': registry.npmjs.org/@types/node/22.15.12
+  vite: registry.npmjs.org/vite/6.3.4_@types+node@22.15.12
   vite-plugin-inspect: registry.npmjs.org/vite-plugin-inspect/11.0.1_vite@6.3.4
 
 packages:
@@ -497,6 +499,14 @@ packages:
     version: 1.0.7
     dev: true
 
+  registry.npmjs.org/@types/node/22.15.12:
+    resolution: {integrity: sha512-K0fpC/ZVeb8G9rm7bH7vI0KAec4XHEhBam616nVJCV51bKzJ6oA3luG4WdKoaztxe70QaNjS/xBmcDLmr4PiGw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/node/-/node-22.15.12.tgz}
+    name: '@types/node'
+    version: 22.15.12
+    dependencies:
+      undici-types: registry.npmjs.org/undici-types/6.21.0
+    dev: true
+
   registry.npmjs.org/ansis/3.17.0:
     resolution: {integrity: sha512-0qWUglt9JEqLFr3w1I1pbrChn1grhaiAR2ocX1PP/flRmxgtwTzPFFFnfIlD6aMOLQZgSuCRlidD70lvx8yhzg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/ansis/-/ansis-3.17.0.tgz}
     name: ansis
@@ -798,6 +808,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  registry.npmjs.org/undici-types/6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz}
+    name: undici-types
+    version: 6.21.0
+    dev: true
+
   registry.npmjs.org/unplugin-utils/0.2.4:
     resolution: {integrity: sha512-8U/MtpkPkkk3Atewj1+RcKIjb5WBimZ/WSLhhR3w6SsIj8XJuKTacSP8g+2JhfSGw0Cb125Y+2zA/IzJZDVbhA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/unplugin-utils/-/unplugin-utils-0.2.4.tgz}
     name: unplugin-utils
@@ -817,7 +833,7 @@ packages:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0 || ^6.0.1
     dependencies:
       birpc: registry.npmjs.org/birpc/2.3.0
-      vite: registry.npmjs.org/vite/6.3.4
+      vite: registry.npmjs.org/vite/6.3.4_@types+node@22.15.12
       vite-hot-client: registry.npmjs.org/vite-hot-client/2.0.4_vite@6.3.4
     dev: true
 
@@ -829,7 +845,7 @@ packages:
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0 || ^6.0.0-0
     dependencies:
-      vite: registry.npmjs.org/vite/6.3.4
+      vite: registry.npmjs.org/vite/6.3.4_@types+node@22.15.12
     dev: true
 
   registry.npmjs.org/vite-plugin-inspect/11.0.1_vite@6.3.4:
@@ -853,14 +869,15 @@ packages:
       perfect-debounce: registry.npmjs.org/perfect-debounce/1.0.0
       sirv: registry.npmjs.org/sirv/3.0.1
       unplugin-utils: registry.npmjs.org/unplugin-utils/0.2.4
-      vite: registry.npmjs.org/vite/6.3.4
+      vite: registry.npmjs.org/vite/6.3.4_@types+node@22.15.12
       vite-dev-rpc: registry.npmjs.org/vite-dev-rpc/1.0.7_vite@6.3.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  registry.npmjs.org/vite/6.3.4:
+  registry.npmjs.org/vite/6.3.4_@types+node@22.15.12:
     resolution: {integrity: sha512-BiReIiMS2fyFqbqNT/Qqt4CVITDU9M9vE+DKcVAsB+ZV0wvTKd+3hMbkpxz1b+NmEDMegpVbisKiAZOnvO92Sw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/vite/-/vite-6.3.4.tgz}
+    id: registry.npmjs.org/vite/6.3.4
     name: vite
     version: 6.3.4
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -901,6 +918,7 @@ packages:
       yaml:
         optional: true
     dependencies:
+      '@types/node': registry.npmjs.org/@types/node/22.15.12
       esbuild: registry.npmjs.org/esbuild/0.25.3
       fdir: registry.npmjs.org/fdir/6.4.4_picomatch@4.0.2
       picomatch: registry.npmjs.org/picomatch/4.0.2

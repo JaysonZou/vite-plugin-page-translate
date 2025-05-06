@@ -23,7 +23,7 @@ export default function immersiveTranslate(
     transformIndexHtml(html) {
       const injectScript = `
         <script type="module">
-          import "/@immersive-translate-runtime";
+          import "./runtime.js";
           window.__immersiveTranslate?.init({
             selector: "${selector}",
             lang: "${lang}",
@@ -32,19 +32,6 @@ export default function immersiveTranslate(
         </script>
       `;
       return html.replace("</body>", `${injectScript}</body>`);
-    },
-
-    resolveId(id) {
-      if (id === "/@immersive-translate-runtime") {
-        return id;
-      }
-    },
-
-    load(id) {
-      if (id === "/@immersive-translate-runtime") {
-        const entryPath = path.resolve(__dirname, "runtime/entry.ts");
-        return fs.readFileSync(entryPath, "utf-8");
-      }
     },
   };
 }

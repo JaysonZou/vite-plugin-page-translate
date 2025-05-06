@@ -1,15 +1,28 @@
 {
-  "name": "viteplugin",
+  "name": "vite-plugin-immersive-translate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Vite plugin for immersive page translation",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./runtime": {
+      "import": "./dist/runtime.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.15.12",
     "vite": "^6.3.4",
     "vite-plugin-inspect": "^11.0.1"
   }

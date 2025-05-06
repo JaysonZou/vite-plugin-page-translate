@@ -3,7 +3,7 @@ import { translateText } from "./translateService";
 const originalMap = new WeakMap<Text, string>();
 
 function isTextNode(node: Node): node is Text {
-  return node.nodeType === Node.TEXT_NODE && node.textContent?.trim();
+  return Boolean(node.nodeType === Node.TEXT_NODE && node.textContent?.trim());
 }
 
 export async function translateZone(el: HTMLElement, lang: string) {
